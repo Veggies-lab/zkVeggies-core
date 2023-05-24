@@ -1,0 +1,30 @@
+{
+  "name": "zkVeggies",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@ethersproject/hash": "^5.7.0",
+    "@ethersproject/web": "^5.7.1",
+    "@matterlabs/hardhat-zksync-deploy": "^0.6.3",
+    "@matterlabs/hardhat-zksync-solc": "^0.3.14",
+    "@matterlabs/hardhat-zksync-verify": "^0.1.4",
+    "@nomiclabs/hardhat-etherscan": "^3.1.7",
+    "@types/node": "^18.15.11",
+    "ethers": "^5.7.2",
+    "hardhat": "^2.13.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2",
+    "zksync-web3": "^0.14.3"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.8.3",
+    "solmate": "^6.7.0"
+  },
+  "scripts": {
+    "deploy:testnet": "forge test && yarn hardhat compile && yarn hardhat deploy-zksync --network zkTestnet",
+    "verify:testnet": "yarn hardhat verify --network zkTestnet [CONTRACT_HERE]",
+    "deploy:mainnet": "forge test && yarn hardhat compile && yarn hardhat deploy-zksync --network zkSync",
+    "verify:mainnet": "yarn hardhat verify --network zkSync [CONTRACT_HERE]"
+  }
+}

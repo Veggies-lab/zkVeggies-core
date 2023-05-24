@@ -1,11 +1,22 @@
 # Compiler files
 cache/
 out/
+artifacts/
+artifacts-zk/
+
+# Cache
+cache/
+cache-zk/
+out/
 
 # Ignores development broadcast logs
 !/broadcast
 /broadcast/*/31337/
 /broadcast/**/dry-run/
+
+# dependencies
+node_modules/
+lib/
 
 # Docs
 docs/
